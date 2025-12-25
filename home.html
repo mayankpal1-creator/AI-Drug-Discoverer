@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='container header-hero'><div class='card hero-card'><div class="row">
+  <div class="col-md-8">
+    <div class="card mb-4 shadow">
+      <div class="card-body">
+        <h4>Generate New Molecule</h4>
+        {% if error %}<div class="alert alert-danger">{{ error }}</div>{% endif %}
+        <form method="post" action="/generate">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">SMILES 1</label>
+              <input class="form-control" name="smiles1" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">SMILES 2</label>
+              <input class="form-control" name="smiles2" required>
+            </div>
+          </div>
+          <button class="btn btn-success">Generate</button>
+        </form>
+      </div>
+    </div>
+
+    {% if result %}
+    <div class="card shadow">
+      <div class="card-body">
+        <h5>Generated Molecule</h5>
+        <p><strong>SMILES:</strong> {{ result['SMILES'] }}</p>
+        <h6>Predicted Properties</h6>
+        <ul>
+          {% for k,v in result['properties'].items() %}
+            <li><strong>{{ k }}:</strong> {{ v }}</li>
+          {% endfor %}
+        </ul>
+        <p><strong>ADME score:</strong> {{ result['adme_score'] }}</p>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="col-md-4">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h5>About</h5>
+        <p>Lightweight generator using dataset interpolation. No RDKit required.</p>
+      </div>
+    </div>
+
+    <div class="card shadow">
+      <div class="card-body">
+        <h5>Quick Actions</h5>
+        <a href="/history" class="btn btn-outline-primary mb-2">View History</a>
+        <a href="/logout" class="btn btn-outline-secondary">Logout</a>
+      </div>
+    </div>
+  </div>
+</div></div></div>
+{% endblock %}

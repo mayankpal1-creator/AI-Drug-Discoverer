@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='container header-hero'><div class='card hero-card'><h3>Your Generation History</h3>
+<table class="table table-striped">
+  <thead><tr><th>ID</th><th>Input 1</th><th>Input 2</th><th>Result SMILES</th><th>ADME</th><th>When</th></tr></thead>
+  <tbody>
+    {% for h in history %}
+    <tr>
+      <td>{{ h.id }}</td>
+      <td>{{ h.smiles1 }}</td>
+      <td>{{ h.smiles2 }}</td>
+      <td>{{ h.result }}</td>
+      <td>{{ h.adme }}</td>
+      <td>{{ h.timestamp }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table></div></div>
+{% endblock %}

@@ -1,0 +1,54 @@
+
+/* Modern light styling enhancements - non-destructive */
+:root{
+  --accent: #6f42c1;
+  --muted: #6c757d;
+  --card-radius: 12px;
+}
+body{
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 100%);
+  color: #212529;
+  padding-top: 70px;
+}
+.navbar{
+  box-shadow: 0 6px 18px rgba(20,24,40,0.06);
+  background: white;
+}
+.navbar-brand { font-weight: 700; color: var(--accent) !important; font-size: 1.25rem; }
+.btn-primary{
+  background: var(--accent);
+  border: none;
+  box-shadow: 0 6px 18px rgba(111,66,193,0.12);
+}
+.card{
+  border: none;
+  border-radius: var(--card-radius);
+  box-shadow: 0 8px 30px rgba(31,41,55,0.05);
+}
+.header-hero{
+  padding: 48px 0;
+}
+.hero-card{
+  border-radius: 16px;
+  padding: 28px;
+}
+.form-control:focus{
+  box-shadow: 0 0 0 0.2rem rgba(111,66,193,0.12);
+  border-color: var(--accent);
+}
+.footer{
+  padding: 32px 0;
+  color: var(--muted);
+}
+.small-muted{ color: var(--muted); font-size: 0.9rem; }
+
+/* make tables nicer */
+.table thead th{ background: #fafafa; border-bottom: 0; }
+.table tbody tr{ background: white; }
+
+/* responsive adjustments */
+@media (max-width: 576px){
+  .header-hero{ padding: 24px 0; }
+  body{ padding-top: 56px; }
+}
