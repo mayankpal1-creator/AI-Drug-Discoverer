@@ -57,11 +57,13 @@ python app/app.py
 ```
 
 ## 🚀 Applications
+
 - Drug discovery research
 - Pharmaceutical R&D
 - Academic and research projects
 - AI in healthcare
 
 ## 👩‍💻 Authors
+
 **Mayank**
 **Aastha Agarwal**
