@@ -65,5 +65,5 @@ python app/app.py
 
 ## 👩‍💻 Authors
 
-**Mayank**
-**Aastha Agarwal**
+- **Mayank**
+- **Aastha Agarwal**
