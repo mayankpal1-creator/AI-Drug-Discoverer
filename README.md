@@ -45,7 +45,7 @@ To reduce time and cost in traditional drug discovery by:
 
 ## 📸 Output
 
-![Generated Molecules](output.png)
+![Generated Molecules](generated_molecules.png)
 
 ---
 
